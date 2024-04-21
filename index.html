@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Menu Indicator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="navigation">
+      <ul>
+        <li class="list active">
+          <a href="#">
+            <span class="icon ti ti-home"></span>
+            <span class="text">Accueil</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon ti ti-user-scan"></span>
+            <span class="text">Profile</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon ti ti-message"></span>
+            <span class="text">Message</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon ti ti-photo-scan"></span>
+            <span class="text">Photo</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon ti ti-adjustments-horizontal"></span>
+            <span class="text">Réglage</span>
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </div>
+
+    <script>
+      const list = document.querySelectorAll(".list");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activeLink));
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </body>
+</html>
